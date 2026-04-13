@@ -31,7 +31,7 @@ An AI-powered Resume Analyzer that uses **Retrieval-Augmented Generation (RAG)**
 ### 1️⃣ Clone the repo
 
 ```bash
-git clone https://github.com/your-username/resume-analyzer-rag.git
+git clone https://github.com/NazmulHudaNabil/resume-analyzer-rag.git
 cd resume-analyzer-rag
 
 python -m venv .venv
