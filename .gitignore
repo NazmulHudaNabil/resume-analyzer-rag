@@ -1,0 +1,4 @@
+.venv
+.env
+.dokcerignore
+__pycache__

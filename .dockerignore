@@ -1,0 +1,43 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Environment variables (VERY IMPORTANT)
+.env
+
+# Git
+.git
+.gitignore
+
+# Mac / system files
+.DS_Store
+
+# Logs
+*.log
+
+# Database / vector store (optional, depends on use)
+vector_db/
+
+# Uploaded files
+uploads/
+
+# Docker files (optional)
+docker-compose.yml
+
+# Node (if you add frontend later)
+node_modules/
+
+# IDE files
+.vscode/
+.idea/
+
+# Tests / notebooks (optional)
+*.ipynb
+tests/

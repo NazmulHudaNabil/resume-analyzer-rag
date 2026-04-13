@@ -1,0 +1,40 @@
+# Core LLM + Embeddings (Mistral)
+langchain
+langchain-core
+langchain-community
+langchain-mistralai
+
+# Vector Database
+chromadb
+
+# Document Processing
+pypdf
+python-docx
+unstructured
+
+# Environment Variables
+python-dotenv
+
+# API Framework (optional but recommended)
+fastapi
+uvicorn
+
+# Data Handling
+pandas
+numpy
+
+# Text Processing
+tiktoken
+
+# Optional (better parsing & NLP)
+nltk
+spacy
+
+# For file uploads (FastAPI)
+python-multipart
+
+# Logging & utilities
+loguru
+
+# Chunk
+RecursiveCharacterTextSplitter
