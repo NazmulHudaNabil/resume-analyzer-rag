@@ -23,10 +23,13 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Create necessary directories
-RUN mkdir -p uploads vector_db
+RUN mkdir -p uploads
 
-# Render provides PORT env variable
-ENV PORT=8000
+# Render provides PORT env variable (default to 10000 — Render's default)
+ENV PORT=10000
 
-# Start FastAPI (IMPORTANT: use $PORT)
+# Expose the port
+EXPOSE ${PORT}
+
+# Start FastAPI — Render sets $PORT automatically
 CMD ["sh", "-c", "uvicorn app:app --host 0.0.0.0 --port $PORT"]

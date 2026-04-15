@@ -1,20 +1,9 @@
-import os
-from dotenv import load_dotenv
+# rag_pipeline/generate.py
 from langchain_mistralai import ChatMistralAI
 from langchain_core.prompts import ChatPromptTemplate
 
-load_dotenv()
-
 def generate_response(context, job_description):
-    api_key = os.getenv("MISTRAL_API_KEY")
-
-    if not api_key:
-        raise ValueError("MISTRAL_API_KEY not found")
-
-    llm = ChatMistralAI(
-        model="mistral-medium",
-        mistral_api_key=api_key   # ✅ FIX
-    )
+    llm = ChatMistralAI(model="mistral-medium")
 
     prompt = ChatPromptTemplate.from_template("""
     You are an expert HR system.
@@ -26,14 +15,20 @@ def generate_response(context, job_description):
     {job_description}
 
     Tasks:
-    1. Extract skills
-    2. Missing skills
-    3. Suggestions
-    4. Match score (%)
+    1. Extract skills from resume
+    2. Compare with job description
+    3. Provide missing skills
+    4. Give improvement suggestions
+    5. Provide a match score (0-100%)
+
+    Output format:
+    Skills:
+    Missing Skills:
+    Suggestions:
+    Match Score:
     """)
 
     chain = prompt | llm
-
     return chain.invoke({
         "context": context,
         "job_description": job_description

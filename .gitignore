@@ -1,4 +1,6 @@
 .venv
 .env
-.dokcerignore
 __pycache__
+uploads/
+*.pyc
+.DS_Store

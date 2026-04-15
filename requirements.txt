@@ -4,37 +4,21 @@ langchain-core
 langchain-community
 langchain-mistralai
 
+# Text Splitter
+langchain-text-splitters
+
 # Vector Database
 chromadb
 
 # Document Processing
 pypdf
-python-docx
-unstructured
 
 # Environment Variables
 python-dotenv
 
-# API Framework (optional but recommended)
+# API Framework
 fastapi
-uvicorn
-
-# Data Handling
-pandas
-numpy
-
-# Text Processing
-tiktoken
-
-# Optional (better parsing & NLP)
-nltk
-spacy
+uvicorn[standard]
 
 # For file uploads (FastAPI)
 python-multipart
-
-# Logging & utilities
-loguru
-
-# Chunk
-RecursiveCharacterTextSplitter
